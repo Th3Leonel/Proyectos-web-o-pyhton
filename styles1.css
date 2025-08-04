@@ -1,0 +1,44 @@
+header { 
+    text-align: center;
+    color: rgb(11, 207, 221);
+    border: 2px auto solid black;
+    padding: auto;
+    font-family: sans-serif;
+    background-color: rgba(0, 255, 170, 0.815);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+
+body {
+    font-size: large;
+    background-color: cadetblue;
+    text-align: center;
+    height: auto;
+
+}
+
+footer {
+    text-align: center;
+    background-color: yellowgreen;
+    font-size: auto;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+
+}
+
+.B {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+    margin: 1px solid black;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    
+}
+
+

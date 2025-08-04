@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anecotas secretas. | Tu Espacio de Confesiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50; /* Verde amigable */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: sans-serif;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        main {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .confession-form, .confession-list-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-top: 5px solid #4CAF50;
+        }
+
+        .confession-form h2, .confession-list-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box; /* Incluye padding y border en el ancho total */
+            resize: vertical; /* Permite redimensionar verticalmente */
+            min-height: 120px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .confession-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+            gap: 25px;
+        }
+
+        .confession-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .confession-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .confession-item p {
+            margin: 0;
+            color: #444;
+        }
+
+        .confession-item .timestamp {
+            display: block;
+            text-align: right;
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: auto; /* Empuja el footer hacia abajo */
+            background-color: #333;
+            color: white;
+            width: 100%;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Anecotas Secretas (Version Beta) </h1>
+        <p>Tu espacio seguro para compartir lo que llevas dentro, de forma anónima.</p>
+    </header>
+
+    <main>
+        <section class="confession-form">
+            <h2>Comparte tu Confesión</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="confession">Escribe tu confesión aquí (completamente anónimo):</label>
+                    <textarea id="confession" name="confession" placeholder="Me siento culpable por... No puedo creer que hice esto... Necesito desahogarme..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar Confesión</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="confession-list-section">
+            <h2>Confesiones Recientes</h2>
+            <div class="confession-list">
+                <div class="confession-item">
+                    <p>"escuche que alguien rompio el baño de la escuela. Gracias a eso cerraron los baños de la escuela."</p>
+                    <span class="timestamp">Hace 2 horas</span>
+                </div>
+                <div class="confession-item">
+                    <p>"Secretamente, me gusta el pop de los 90 más de lo que admito en público."</p>
+                    <span class="timestamp">Hace 1 día</span>
+                </div>
+                <div class="confession-item">
+                    <p>"A veces finjo que mi internet va mal para no atender videollamadas."</p>
+                    <span class="timestamp">Hace 2 días</span>
+                </div>
+                <div class="confession-item">
+                    <p>"Siempre reuso los calcetines si no están *tan* sucios."</p>
+                    <span class="timestamp">Hace 5 días</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AnónimaMente. Tu privacidad es nuestra prioridad.</p>
+    </footer>
+
+</body>
+</html>

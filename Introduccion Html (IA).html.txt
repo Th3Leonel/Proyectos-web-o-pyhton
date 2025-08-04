@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            color: #666;
+        }
+        .boton {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .boton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¡Bienvenido a Mi Página Web!</h1>
+        <p>Esta es una página simple creada con HTML y un poco de CSS.</p>
+    </header>
+
+    <section>
+        <h2>Sobre esta página</h2>
+        <p>Aquí puedes escribir información sobre ti, tus intereses o el propósito de esta página web. La idea es que sirva como un punto de partida.</p>
+        <p>¡No dudes en modificar el contenido a tu gusto!</p>
+    </section>
+
+    <section>
+        <h2>Mis Habilidades (Ejemplo)</h2>
+        <ul>
+            <li>HTML básico</li>
+            <li>CSS básico</li>
+            <li>Un poco de creatividad</li>
+        </ul>
+        <a href="https://www.google.com" target="_blank" class="boton">Visita Google</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

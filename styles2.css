@@ -1,0 +1,359 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Un gris claro suave */
+    color: #333;
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces internos */
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden; /* Limpia floats */
+}
+
+/* Estilos de encabezado */
+.header {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky; /* Fija el encabezado al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.site-title {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usa flexbox para alinear los elementos del menú */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Puedes añadir una clase 'active' con JS para la página actual */
+    background-color: #34495e; /* Un tono más claro al pasar el ratón */
+    color: #ecf0f1;
+}
+
+/* Estilos de las secciones generales */
+.section {
+    padding: 60px 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.section:last-of-type {
+    margin-bottom: 0; /* No hay margen inferior para la última sección */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block; /* Para que el pseudo-elemento se posicione correctamente */
+}
+
+.section-title::after { /* Línea decorativa debajo del título */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db; /* Azul vibrante */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Sección "Acerca de Mí" */
+.about-me {
+    background-color: #3498db; /* Azul vibrante */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 5px solid #fff;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin-bottom: 20px;
+}
+
+.about-me h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 15px;
+    line-height: 1.8;
+}
+
+/* Sección de Habilidades */
+.skills-grid {
+    display: grid; /* Usa CSS Grid para un diseño de cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+    margin-top: 40px;
+}
+
+.skill-item {
+    background-color: #ecf0f1; /* Gris claro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Alinea el texto a la izquierda dentro de la tarjeta */
+}
+
+.skill-item:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.skill-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección de Portafolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    border-bottom: 1px solid #ddd;
+}
+
+.portfolio-item h3 {
+    color: #2c3e50;
+    margin: 15px 20px 10px;
+    font-size: 1.5rem;
+}
+
+.portfolio-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 20px 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0 20px 20px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    background-color: #f9f9f9;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Ancho completo menos padding y borde */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #3498db; /* Borde azul al enfocar */
+    outline: none; /* Elimina el contorno por defecto del navegador */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    background-color: #2c3e50; /* Azul oscuro para el botón de enviar */
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #34495e;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los elementos del menú en pantallas pequeñas */
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 40px 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .about-me h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-me p {
+        font-size: 1rem;
+    }
+
+    .skills-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 20px;
+    }
+
+    .skill-item,
+    .portfolio-item {
+        margin: 0 auto; /* Centra los elementos de la cuadrícula */
+        max-width: 400px; /* Limita el ancho en pantallas pequeñas */
+    }
+
+    .contact-form {
+        margin: 20px auto 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
